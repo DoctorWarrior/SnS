@@ -39,7 +39,7 @@ body{
 }
 
 .navbar-inverse{
-    /** background: #303F9F; */
+    background: black; 
 }
 
 .navbar-inverse .navbar-nav > .active > a,
