@@ -1,12 +1,14 @@
 'use strict';
+
 angular.module('categoryApp', [])
 
-        .controller('categoryController', function(){
+        .controller('CategoryController', ['$scope', function($scope){
             
-            this.tab = 1;
-            this.filtText = '';
+            $scope.tab = 1;
+            $scope.filtText = '';
+            $scope.showDetails = false;
             
-            var videos=[
+            $scope.videos=[
                          {
                             name: 'The Baobab',
                             image: 'images/baobab.png',
@@ -42,28 +44,31 @@ angular.module('categoryApp', [])
                         }  
                         ];
             
-            this.videos = videos;
             
-            this.select = function(setTab)            {
-                this.tab = setTab;
+            $scope.select = function(setTab)            {
+                $scope.tab = setTab;
                 
                 if (setTab === 2){
-                    this.filtText = "fiction";
+                    $scope.filtText = "fiction";
                 }
                 else if (setTab === 3){
-                    this.filtText = "non_F";
+                    $scope.filtText = "non_F";
                 }
                 else if (setTab === 4){
-                    this.filtText = "emerging_readers";
+                    $scope.filtText = "emerging_readers";
                 }
                 else{
-                    this.filtText = '';
+                    $scope.filtText = '';
                 }
                 
             };
             
-            this.isSelected = function(checkTab){
-                return (this.tab ===checkTab);
+            $scope.isSelected = function(checkTab){
+                return ($scope.tab ===checkTab);
+            };
+            
+            $scope.toggleDetails = function() {
+                $scope.showDetails = !$scope.showDetails;
             };
 
-        });
+        }]);
