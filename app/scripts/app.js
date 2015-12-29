@@ -7,7 +7,7 @@ angular.module('SnSApp', ['ngRoute'])
         //route for the contactus page
         .when('/contactus', {
             templateUrl : 'contactus.html',
-            controller : 'contactController'
+            controller : 'ContactController'
         })
     
         //route for the category page
