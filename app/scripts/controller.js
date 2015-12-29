@@ -2,47 +2,13 @@
 
 angular.module('SnSApp')
 
-        .controller('CategoryController', ['$scope', function($scope){
+        .controller('CategoryController', ['$scope', 'cateFactory', function($scope, cateFactory){
             
             $scope.tab = 1;
             $scope.filtText = '';
             $scope.showDetails = false;
             
-            $scope.videos=[
-                         {
-                            name: 'The Baobab',
-                            image: 'images/baobab.png',
-                            genre: 'Fiction',
-                            language: 'ASL',
-                            price: '4.99',
-                            description: 'The Baobab is an original story about a curious little girl who embarks on an adventure. Complete with enthralling illustrations and talented American Sign Language (ASL) storytelling, this bilingual interactive storybook app features a rich American Sign Language glossary with 170 English to ASL words.'
-
-                        },
-                        {
-                           name: 'The Boy Who Cried Wolf',
-                           image: 'images/boywolf.png',
-                           genre: 'fiction',
-                           language: 'ASL',
-                           price: '4.99',
-                           description: 'The classic Aesop&#146;s fable about the boy who cried wolf is brought to life in a wholly new medium with vivid American Sign Language storytelling, adding cinematic elements to a timeless tale. Accompanied by detailed paintings that evoke times of yore, this storybook app for the iPad comes with over 140 vocabulary words, signed and fingerspelled. App design is based on proven research on bilingualism and visual learning from Visual Language and Visual Learning.'
-                        },
-                        {
-                            name: 'The Solar System',
-                            image: 'images/solar_system.png',
-                            genre: 'non_F',
-                            language: 'ASL',
-                            price: '2.99',
-                            description: 'The Solar System is an educational narrative in both ASL and English about our eight planets, moons, and the sun. The illustrations and the video narrative provides enhanced visual aids to create an interactive, self-directed reading and learning experience for young deaf children. The Solar System is full of scientific facts along with a fantastic collection of vocabulary words and definitions in ASL.'
-                        },
-                        {
-                            name: 'The Blue Lobster',
-                            image: 'images/blue_lobster.png',
-                            genre: 'emerging_readers',
-                            language: 'ASL',
-                            price: '2.99',
-                            description: 'From the same team who made the award-winning ASL/English bilingual storybook app, The Baobab, we now bring you The Blue Lobster! The adventures of the curious little girl continues! In this storybook designed for younger and emerging readers, ages 3 & up, the curious little girl goes off in search for a rare blue lobster!'
-                        }  
-                        ];
+            $scope.videos= cateFactory.getVideos();
             
             
             $scope.select = function(setTab)            {
@@ -99,6 +65,43 @@ angular.module('SnSApp')
                     $scope.feedbackForm.$setPristine();
                     console.log($scope.feedback);
                 }
+            };
+        }])
+
+
+
+
+    .controller('VideoDetailController', ['$scope', '$routeParams', 'cateFactory', function($scope, $routeParams, cateFactory) {
+
+            
+            var video= cateFactory.getVideo(parseInt($routeParams.id,10));
+            $scope.video = video;
+
+
+        }])
+
+
+
+
+    .controller('VideoCommentController', ['$scope', function($scope) {
+            
+            //Step 1: Create a JavaScript object to hold the comment from the form
+            
+            $scope.submitComment = function () {
+                console.log($scope.comment);
+
+                //Step 2: This is how you record the date
+                $scope.comment.date = new Date().toISOString();
+                
+                // Step 3: Push your comment into the video's comment array
+                $scope.video.comments.push($scope.comment);
+                
+                //Step 4: reset your form to pristine
+                $scope.commentForm.$setPristine();
+                
+                //Step 5: reset your JavaScript object that holds your comment
+                $scope.comment = {author: "", rating: 5, comment: "", date: new Date().toISOString()};
+                console.log($scope.comment);
             };
         }])
 

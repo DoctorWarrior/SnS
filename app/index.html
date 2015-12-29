@@ -36,7 +36,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="botton" aria-haspopup="true" aria-expanded="false">
+                            <a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="botton" aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Category<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Fiction</a></li>
@@ -50,7 +50,7 @@
                                 <li><a href="#">American Sign Language</a></li>
                                 <li><a href="#">Chinese Sign Language</a></li>
                                 <li><a href="#">Norwegian Sign Language</a></li>
-                                <li><a href="search.html">More</a></li>
+                                <li><a href="#/category">More</a></li>
                             </ul>               <li><a href="submit.html">
         <i class="fa fa-share-alt"></i> Submit</a></li>
                     </ul>
@@ -107,15 +107,7 @@
     
     
     
-    
-<ng-include src="'category.html'"></ng-include>
-    
-    
-    
-    
-    
-    
-    
+<ng-view></ng-view>    
     
     
     
@@ -129,8 +121,8 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#/contactus">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-6 col-sm-5">
@@ -171,6 +163,7 @@
     </script>
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controller.js"></script>
     <script src="scripts/services.js"></script>

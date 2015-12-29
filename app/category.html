@@ -1,4 +1,5 @@
 
+    
     <div class="container">
         
 <!--------PLACEHOLDER----------------->        
@@ -50,11 +51,12 @@
                    <li class="media" ng-repeat="video in videos | filter:filtText">
                         
                         <div class="media-left media-middle">
-                            <a href="#">
+                            <a href="#/category/{{video._id}}">
                             <img class="media-object img-thumbnail"
                              ng-src={{video.image}} alt="video">
                             </a>
                         </div>
+                       
                         <div class="media-body">
                             <h2 class="media-heading">{{video.name}}
                                 <span class="label label-info">{{video.label}}</span>
@@ -69,4 +71,7 @@
         </div>
     </div>
     
+ 
+
     
+   
