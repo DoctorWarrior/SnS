@@ -51,7 +51,7 @@
                    <li class="media" ng-repeat="video in videos | filter:filtText">
                         
                         <div class="media-left media-middle">
-                            <a href="#/category/{{video._id}}">
+                            <a ui-sref="app.videodetails({id: video._id})">
                             <img class="media-object img-thumbnail"
                              ng-src={{video.image}} alt="video">
                             </a>

@@ -76,10 +76,10 @@ angular.module('SnSApp')
 
 
 
-        .controller('VideoDetailController', ['$scope', '$routeParams', 'cateFactory', function($scope, $routeParams, cateFactory) {
+        .controller('VideoDetailController', ['$scope', '$stateParams', 'cateFactory', function($scope, $stateParams, cateFactory) {
 
             
-            var video= cateFactory.getVideo(parseInt($routeParams.id,10));
+            var video= cateFactory.getVideo(parseInt($stateParams.id,10));
             $scope.video = video;
 
 
