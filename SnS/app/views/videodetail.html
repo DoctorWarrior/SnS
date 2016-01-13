@@ -1,27 +1,29 @@
-    <div class="container" ng-controller="VideoDetailController">
+    <div class="container">
         <div class="row row-content">
             <div class="col-xs-12">
                 <button class="btn btn-xs btn-primary pull-right"
                     type="button" ui-sref="app.category">
                     Back to Menu
                 </button>
-                <div class="media">
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                        <img class="media-object img-thumbnail"
-                         ng-src={{video.image}} alt="{{video.name}}">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h2 class="media-heading">{{video.name}}
-                         <span class="label label-danger">{{video.label}}</span>
-                         <span class="badge">{{video.price | currency}}</span></h2>
-                        <p>{{video.description}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-9 col-xs-offset-1" ng-controller="VideoCommentController">
+                
+                
+                
+                                
+<!------------web media player-------------------->              
+                
+<div ng-controller="MediaPlayerController as controller" class="videogular-container">
+    <videogular vg-theme="controller.config.theme.url">
+        <vg-media vg-src="controller.config.sources"
+                  vg-tracks="controller.config.tracks"
+                  vg-native-controls="true">
+        </vg-media>
+    </videogular>
+</div>
+  
+<!------------end of media player-------------------->  
+                
+                
+        <div class="col-xs-9 col-xs-offset-1" ng-controller="VideoCommentController">
                 <ul>
                     <blockquote ng-repeat="comment in video.comments">
                         <p>{{comment.rating}} Stars</p>
@@ -73,5 +75,12 @@
                     </div>
                 </form>
             </div>
+                
+            
+               
+                
+                
+            
         </div>
     </div>
+</div>
