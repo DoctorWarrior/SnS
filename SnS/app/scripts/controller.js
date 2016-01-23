@@ -33,14 +33,21 @@ angular.module('SnSApp')
             $scope.filtText = '';
             $scope.showDetails = false;
             
-            $scope.showMenu = true;
+            $scope.show = false;
             $scope.message = "Loading ...";
             
-            $scope.videos = cateFactory.getVideos().query();
+            cateFactory.getVideos().query(
+                function(response) {
+                    $scope.videos = response;
+                    $scope.showMenu = true;
+                },
+                function(response) {
+                    $scope.message = "Error:"+response.status + " " + response.statusText;
+                }
+            );
             
             
-            
-            $scope.select = function(setTab)            {
+            $scope.select = function(setTab){
                 $scope.tab = setTab;
                 
                 if (setTab === 2){
@@ -114,11 +121,20 @@ angular.module('SnSApp')
 
         .controller('VideoDetailController', ['$scope', '$stateParams', 'cateFactory', function($scope, $stateParams, cateFactory) {
 
-            $scope.video = {};
-            $scope.showVideo = true;
+            
+            $scope.showVideo = false;
             $scope.message = "Loading ...";
             
-            $scope.video = cateFactory.getVideos().get({id:parseInt($stateParams.id,10)});
+            $scope.video = cateFactory.getVideos().get({ id: parseInt($stateParams.id, 10) })
+            .$promise.then(
+                            function (response) {
+                                $scope.video = response;
+                                $scope.showVideo = true;
+                            },
+                            function (response) {
+                                $scope.message = "Error: " + response.status + " " + response.statusText;
+                            }
+            );
 
 
         }])
@@ -126,7 +142,10 @@ angular.module('SnSApp')
 
 
 
-    .controller('VideoCommentController', ['$scope', function($scope) {
+        
+    .controller('VideoCommentController', ['$scope', 'cateFactory', function ($scope, cateFactory) {    
+        
+    /*
             
             //Step 1: Create a JavaScript object to hold the comment from the form
             
@@ -145,6 +164,26 @@ angular.module('SnSApp')
                 //Step 5: reset your JavaScript object that holds your comment
                 $scope.comment = {author: "", rating: 5, comment: "", date: new Date().toISOString()};
                 console.log($scope.comment);
+            };
+        }])
+
+*/
+
+
+
+            $scope.comment = {rating:5, comment:"", author:"", date:""};
+            
+            $scope.submitComment = function () {
+
+                $scope.comment.date = new Date().toISOString();
+                console.log($scope.comment);
+
+                $scope.video.comments.push($scope.comment);
+                cateFactory.getVideos().update({ id: $scope.video.id }, $scope.video);
+
+                $scope.commentForm.$setPristine();
+
+                $scope.comment = { rating: 5, comment: "", author: "", date: "" };
             };
         }])
 

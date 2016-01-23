@@ -6,7 +6,7 @@
       "image": "images/baobab.png",
       "genre": "Fiction",
       "language": "ASL",
-      "price": "4.99",
+      "price": 4.99,
       "description": "The Baobab is an original story about a curious little girl who embarks on an adventure. Complete with enthralling illustrations and talented American Sign Language (ASL) storytelling, this bilingual interactive storybook app features a rich American Sign Language glossary with 170 English to ASL words.",
       "comments": [
         {
@@ -38,6 +38,156 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "1",
+          "comment": "adfasdfds",
+          "author": "",
+          "date": "2016-01-20T20:41:24.141Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dadsfadsfdssdfasdfdsfdasf",
+          "author": "",
+          "date": "2016-01-20T20:41:45.732Z"
+        },
+        {
+          "rating": 5,
+          "comment": "this is just for a test",
+          "author": "",
+          "date": "2016-01-20T20:41:58.519Z"
+        },
+        {
+          "rating": 5,
+          "comment": "dasdf",
+          "author": "",
+          "date": "2016-01-20T20:50:55.189Z"
+        },
+        {
+          "rating": "2",
+          "comment": "asdfd",
+          "author": "",
+          "date": "2016-01-20T20:50:58.740Z"
+        },
+        {
+          "rating": "1",
+          "comment": "This is just a test",
+          "author": "",
+          "date": "2016-01-20T20:51:09.673Z"
+        },
+        {
+          "rating": "2",
+          "comment": "This is another test.",
+          "author": "Tester",
+          "date": "2016-01-20T20:53:00.884Z"
+        },
+        {
+          "rating": 5,
+          "comment": "Test again",
+          "author": "Tester1",
+          "date": "2016-01-21T15:47:10.548Z"
         }
       ]
     },
@@ -47,7 +197,7 @@
       "image": "images/boywolf.png",
       "genre": "fiction",
       "language": "ASL",
-      "price": "4.99",
+      "price": 4.99,
       "description": "The classic Aesop&#146;s fable about the boy who cried wolf is brought to life in a wholly new medium with vivid American Sign Language storytelling, adding cinematic elements to a timeless tale. Accompanied by detailed paintings that evoke times of yore, this storybook app for the iPad comes with over 140 vocabulary words, signed and fingerspelled. App design is based on proven research on bilingualism and visual learning from Visual Language and Visual Learning.",
       "comments": [
         {
@@ -79,6 +229,18 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "This is a test",
+          "author": "Tester",
+          "date": "2016-01-21T14:32:11.122Z"
+        },
+        {
+          "rating": 5,
+          "comment": "This is just a test. 2 way data binding",
+          "author": "Tester",
+          "date": "2016-01-21T19:22:51.631Z"
         }
       ]
     },
