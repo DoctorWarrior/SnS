@@ -38,156 +38,6 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "1",
-          "comment": "adfasdfds",
-          "author": "",
-          "date": "2016-01-20T20:41:24.141Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": "2",
-          "comment": "dadsfadsfdssdfasdfdsfdasf",
-          "author": "",
-          "date": "2016-01-20T20:41:45.732Z"
-        },
-        {
-          "rating": 5,
-          "comment": "this is just for a test",
-          "author": "",
-          "date": "2016-01-20T20:41:58.519Z"
-        },
-        {
-          "rating": 5,
-          "comment": "dasdf",
-          "author": "",
-          "date": "2016-01-20T20:50:55.189Z"
-        },
-        {
-          "rating": "2",
-          "comment": "asdfd",
-          "author": "",
-          "date": "2016-01-20T20:50:58.740Z"
-        },
-        {
-          "rating": "1",
-          "comment": "This is just a test",
-          "author": "",
-          "date": "2016-01-20T20:51:09.673Z"
-        },
-        {
-          "rating": "2",
-          "comment": "This is another test.",
-          "author": "Tester",
-          "date": "2016-01-20T20:53:00.884Z"
-        },
-        {
-          "rating": 5,
-          "comment": "Test again",
-          "author": "Tester1",
-          "date": "2016-01-21T15:47:10.548Z"
         }
       ]
     },
@@ -250,7 +100,7 @@
       "image": "images/solar_system.png",
       "category": "non_F",
       "language": "ASL",
-      "price": "2.99",
+      "price": 2.99,
       "description": "The Solar System is an educational narrative in both ASL and English about our eight planets, moons, and the sun. The illustrations and the video narrative provides enhanced visual aids to create an interactive, self-directed reading and learning experience for young deaf children. The Solar System is full of scientific facts along with a fantastic collection of vocabulary words and definitions in ASL.",
       "comments": [
         {
@@ -282,6 +132,18 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "3",
+          "comment": "come on",
+          "author": "Come",
+          "date": "2016-01-24T23:22:16.310Z"
+        },
+        {
+          "rating": "2",
+          "comment": "sdf",
+          "author": "d",
+          "date": "2016-01-24T23:54:53.511Z"
         }
       ]
     },
@@ -327,5 +189,48 @@
       ]
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "mychannel": "tel",
+      "firstName": "Ding",
+      "lastName": "Dong",
+      "agree": true,
+      "email": "bla@blubb.cd",
+      "tel": {
+        "areaCode": "234",
+        "number": "23424"
+      },
+      "comments": "adsfaw adfas",
+      "id": 1
+    },
+    {
+      "mychannel": "tel",
+      "firstName": "John",
+      "lastName": "Smith",
+      "agree": true,
+      "email": "js@blubb.cd",
+      "tel": {
+        "areaCode": "234",
+        "number": "23424"
+      },
+      "comments": "This is John Smith.",
+      "id": 2
+    },
+    {
+      "mychannel": "",
+      "firstName": "asd",
+      "lastName": "d",
+      "agree": false,
+      "email": "shuxu.tian@gallaudet.edu",
+      "id": 3
+    },
+    {
+      "mychannel": "Email",
+      "firstName": "tester",
+      "lastName": "tester",
+      "agree": true,
+      "email": "shuxu.tian@gallaudet.edu",
+      "id": 4
+    }
+  ]
 }

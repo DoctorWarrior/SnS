@@ -90,13 +90,8 @@ angular.module('SnSApp')
         }])
 
 
-        .controller('SubmitController', ['$scope', function($scope) {
-            
-        }])
 
-
-
-        .controller('FeedbackController', ['$scope', function($scope) {
+        .controller('FeedbackController', ['$scope', 'feedbackFactory', function ($scope, feedbackFactory) {
             
             $scope.sendFeedback = function() {
                 
@@ -107,7 +102,19 @@ angular.module('SnSApp')
                     console.log('incorrect');
                 }
                 else {
+                   
                     $scope.invalidChannelSelection = false;
+
+                    var feedback = feedbackFactory.getFeedback().get();
+                    feedback.mychannel = $scope.feedback.mychannel;
+                    feedback.firstName = $scope.feedback.firstName;
+                    feedback.lastName = $scope.feedback.lastName;
+                    feedback.agree = $scope.feedback.agree;
+                    feedback.email = $scope.feedback.email;
+                    feedback.$save();
+
+
+
                     $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:"" };
                     $scope.feedback.mychannel="";
                     $scope.feedbackForm.$setPristine();
@@ -115,8 +122,6 @@ angular.module('SnSApp')
                 }
             };
         }])
-
-
 
 
         .controller('VideoDetailController', ['$scope', '$stateParams', 'cateFactory', function($scope, $stateParams, cateFactory) {
@@ -136,40 +141,11 @@ angular.module('SnSApp')
                             }
             );
 
-
         }])
-
-
 
 
         
     .controller('VideoCommentController', ['$scope', 'cateFactory', function ($scope, cateFactory) {    
-        
-    /*
-            
-            //Step 1: Create a JavaScript object to hold the comment from the form
-            
-            $scope.submitComment = function () {
-                console.log($scope.comment);
-
-                //Step 2: This is how you record the date
-                $scope.comment.date = new Date().toISOString();
-                
-                // Step 3: Push your comment into the video's comment array
-                $scope.video.comments.push($scope.comment);
-                
-                //Step 4: reset your form to pristine
-                $scope.commentForm.$setPristine();
-                
-                //Step 5: reset your JavaScript object that holds your comment
-                $scope.comment = {author: "", rating: 5, comment: "", date: new Date().toISOString()};
-                console.log($scope.comment);
-            };
-        }])
-
-*/
-
-
 
             $scope.comment = {rating:5, comment:"", author:"", date:""};
             
@@ -186,6 +162,5 @@ angular.module('SnSApp')
                 $scope.comment = { rating: 5, comment: "", author: "", date: "" };
             };
         }])
-
 
 ;
