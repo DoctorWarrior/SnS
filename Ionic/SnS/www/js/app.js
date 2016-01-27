@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('SnS', ['ionic', 'SnS.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -25,49 +25,71 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/sidebar.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.home', {
+    url: '/home',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
+      'mainContent': {
+        templateUrl: 'templates/home.html'
       }
     }
   })
-
-  .state('app.browse', {
-      url: '/browse',
+  
+  .state('app.category', {
+      url: '/category',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
+        'mainContent': {
+          templateUrl: 'templates/category.html',
+          controller: ''
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+  
+  .state('app.upload', {
+      url: '/upload',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+        'mainContent': {
+          templateUrl: 'templates/upload.html',
+          controller: ''
         }
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+  .state('app.aboutus', {
+      url: '/aboutus',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/aboutus.html'
+        }
       }
-    }
-  });
+    })
+
+   .state('app.contactus', {
+      url: '/contactus',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/contactus.html'
+        }
+      }
+    })
+
+    .state('app.videodetails', {
+      url: '/category/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/videodetail.html',
+          controller: ''
+        }
+      }
+    })
+
+  ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });

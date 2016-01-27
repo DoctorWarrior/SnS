@@ -38,6 +38,12 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "1",
+          "comment": "Test the comment function",
+          "author": "Tester",
+          "date": "2016-01-26T20:15:26.845Z"
         }
       ]
     },

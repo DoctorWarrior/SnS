@@ -1,0 +1,9 @@
+<ion-view view-title="Category">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="video in Videos" href="#/app/video/{{video.id}}">
+        {{video.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
