@@ -44,6 +44,18 @@
           "comment": "Test the comment function",
           "author": "Tester",
           "date": "2016-01-26T20:15:26.845Z"
+        },
+        {
+          "rating": "1",
+          "comment": "Test",
+          "author": "Tester",
+          "date": "2016-01-27T17:21:18.762Z"
+        },
+        {
+          "rating": "2",
+          "comment": "This is a test",
+          "author": "Tester",
+          "date": "2016-01-28T17:55:54.458Z"
         }
       ]
     },
