@@ -4,7 +4,7 @@
       "id": 0,
       "name": "The Baobab",
       "image": "images/baobab.png",
-      "genre": "Fiction",
+      "genre": "fiction",
       "language": "ASL",
       "price": 4.99,
       "description": "The Baobab is an original story about a curious little girl who embarks on an adventure. Complete with enthralling illustrations and talented American Sign Language (ASL) storytelling, this bilingual interactive storybook app features a rich American Sign Language glossary with 170 English to ASL words.",
@@ -56,6 +56,12 @@
           "comment": "This is a test",
           "author": "Tester",
           "date": "2016-01-28T17:55:54.458Z"
+        },
+        {
+          "rating": "2",
+          "comment": "dafdsa",
+          "author": "Tester",
+          "date": "2016-02-04T20:12:58.742Z"
         }
       ]
     },
@@ -237,18 +243,10 @@
     {
       "mychannel": "",
       "firstName": "asd",
-      "lastName": "d",
+      "lastName": "D",
       "agree": false,
       "email": "shuxu.tian@gallaudet.edu",
       "id": 3
-    },
-    {
-      "mychannel": "Email",
-      "firstName": "tester",
-      "lastName": "tester",
-      "agree": true,
-      "email": "shuxu.tian@gallaudet.edu",
-      "id": 4
     }
   ]
 }

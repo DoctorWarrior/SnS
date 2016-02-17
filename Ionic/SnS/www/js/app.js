@@ -46,7 +46,17 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       views: {
         'mainContent': {
           templateUrl: 'templates/category.html',
-          controller: ''
+          controller: 'CategoryController'
+        }
+      }
+    })
+  
+  .state('app.videodetails', {
+      url: '/category/:id',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/videodetail.html',
+          controller: 'VideoDetailController'
         }
       }
     })
@@ -79,15 +89,7 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       }
     })
 
-    .state('app.videodetails', {
-      url: '/category/:id',
-      views: {
-        'mainContent': {
-          templateUrl: 'templates/videodetail.html',
-          controller: ''
-        }
-      }
-    })
+    
 
   ;
   // if none of the above states are matched, use this as the fallback

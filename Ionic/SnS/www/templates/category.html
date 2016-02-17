@@ -1,9 +1,25 @@
 <ion-view view-title="Category">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="video in Videos" href="#/app/video/{{video.id}}">
-        {{video.name}}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+    <div class="tabs-striped tabs-color-royal">
+        <ul class="tabs">
+            <li ng-class="{active:isSelected(1)}" class="tab-item">
+                <a ng-click="select(1)">All stories</a></li>
+            <li ng-class="{active:isSelected(2)}" class="tab-item">
+                <a ng-click="select(2)">Fiction</a></li>
+            <li ng-class="{active:isSelected(3)}" class="tab-item">
+                <a ng-click="select(3)">Nonfiction</a></li>
+            <li ng-class="{active:isSelected(4)}" class="tab-item">
+                <a  ng-click="select(4)">Emerging Readers</a></li>
+        </ul>
+    </div>       
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="video in videos | filter:filtText" href="#/app/category/{{video.id}}" class="item-thumbnail-left">
+              <img ng-src="{{baseURL+video.image}}">
+                <h2>{{video.name}}
+                    <span style="font-size:75%">{{video.price | currency}}</span>
+                </h2>
+                <p>{{video.description}}</p>
+          </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>

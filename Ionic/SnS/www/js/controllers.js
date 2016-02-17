@@ -67,7 +67,9 @@ angular.module('SnS.controllers', [])
             };
         })
 
-.controller('CategoryController', ['$scope', 'cateFactory', function($scope, cateFactory){
+.controller('CategoryController', ['$scope', 'cateFactory', 'baseURL', function($scope, cateFactory, baseURL){
+
+            $scope.baseURL = baseURL;
             
             $scope.tab = 1;
             $scope.filtText = '';
@@ -100,7 +102,7 @@ angular.module('SnS.controllers', [])
                     $scope.filtText = "emerging_readers";
                 }
                 else{
-                    $scope.filtText = '';
+                    $scope.filtText = "";
                 }
                 
             };
@@ -163,9 +165,10 @@ angular.module('SnS.controllers', [])
 }])
 
 
-.controller('VideoDetailController', ['$scope', '$stateParams', 'cateFactory', function($scope, $stateParams, cateFactory) {
-
-            
+.controller('VideoDetailController', ['$scope', '$stateParams', 'cateFactory', 'baseURL', function($scope, $stateParams, cateFactory, baseURL) {
+    
+            $scope.baseURL = baseURL;
+            $scope.video = {};
             $scope.showVideo = false;
             $scope.message = "Loading ...";
             
