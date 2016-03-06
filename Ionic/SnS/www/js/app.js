@@ -56,7 +56,12 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       views: {
         'mainContent': {
           templateUrl: 'templates/videodetail.html',
-          controller: 'VideoDetailController'
+          controller: 'VideoDetailController',
+            resolve: {
+            video: ['$stateParams','cateFactory', function($stateParams, cateFactory){
+                return cateFactory.get({id:parseInt($stateParams.id, 10)});
+            }]
+        }
         }
       }
     })
@@ -65,8 +70,7 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       url: '/upload',
       views: {
         'mainContent': {
-          templateUrl: 'templates/upload.html',
-          controller: ''
+          templateUrl: 'templates/upload.html'
         }
       }
     })
@@ -85,6 +89,24 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       views: {
         'mainContent': {
           templateUrl: 'templates/contactus.html'
+        }
+      }
+    })
+  
+  .state('app.favorites', {
+      url: '/favorites',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/favorites.html',
+            controller:'FavoritesController',
+            resolve: {
+              videos:  ['cateFactory', function(cateFactory){
+                  return cateFactory.query();
+              }],
+              favorites: ['favoriteFactory', function(favoriteFactory) {
+                  return favoriteFactory.getFavorites();
+              }]
+          }
         }
       }
     })

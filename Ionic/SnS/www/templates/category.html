@@ -19,7 +19,10 @@
                     <span style="font-size:75%">{{video.price | currency}}</span>
                 </h2>
                 <p>{{video.description}}</p>
-          </ion-item>
+                <ion-option-button class="button-assertive icon ion-plus-circled"
+            ng-click="addFavorite({{video.id}})">
+                </ion-option-button>
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
