@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $ionicLoading) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,6 +20,25 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       StatusBar.styleDefault();
     }
   });
+    $rootScope.$on('loading:show', function () {
+        $ionicLoading.show({
+            template: '<ion-spinner></ion-spinner> Loading ...'
+        })
+    });
+
+    $rootScope.$on('loading:hide', function () {
+        $ionicLoading.hide();
+    });
+
+    $rootScope.$on('$stateChangeStart', function () {
+        console.log('Loading ...');
+        $rootScope.$broadcast('loading:show');
+    });
+
+    $rootScope.$on('$stateChangeSuccess', function () {
+        console.log('done');
+        $rootScope.$broadcast('loading:hide');
+    });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -46,7 +65,12 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       views: {
         'mainContent': {
           templateUrl: 'templates/category.html',
-          controller: 'CategoryController'
+          controller: 'CategoryController',
+            resolve: {
+              videos:  ['cateFactory', function(cateFactory){
+                  return cateFactory.query();
+              }]
+            }
         }
       }
     })
@@ -106,7 +130,7 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
               favorites: ['favoriteFactory', function(favoriteFactory) {
                   return favoriteFactory.getFavorites();
               }]
-          }
+            }
         }
       }
     })
