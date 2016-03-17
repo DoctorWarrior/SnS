@@ -4,9 +4,12 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
+angular.module('SnS', ['ionic', 'ngCordova', 'SnS.controllers', 'SnS.services'])
 
-.run(function($ionicPlatform, $rootScope, $ionicLoading) {
+
+.run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $timeout) {
+
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,7 +22,14 @@ angular.module('SnS', ['ionic', 'SnS.controllers', 'SnS.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+      
+    $timeout(function(){
+        $cordovaSplashscreen.hide();
+    },1000);
+  
+  
   });
+    
     $rootScope.$on('loading:show', function () {
         $ionicLoading.show({
             template: '<ion-spinner></ion-spinner> Loading ...'

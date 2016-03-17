@@ -71,8 +71,7 @@ angular.module('SnS.controllers', [])
             };
         })
 
-.controller('CategoryController', ['$scope', 'cateFactory', 'favoriteFactory', 'videos', 'baseURL', '$ionicListDelegate', function($scope, cateFactory, favoriteFactory, videos, baseURL, $ionicListDelegate){
-    
+.controller('CategoryController', ['$scope', 'favoriteFactory', 'videos', 'baseURL', '$ionicListDelegate', '$ionicPlatform', '$cordovaLocalNotification', '$cordovaToast', function($scope,favoriteFactory, videos, baseURL, $ionicListDelegate, $ionicPlatform, $cordovaLocalNotification, $cordovaToast){
 
     $scope.baseURL = baseURL;
             
@@ -114,6 +113,33 @@ angular.module('SnS.controllers', [])
         console.log("index is " + index);
         favoriteFactory.addToFavorites(index);
     $ionicListDelegate.closeOptionButtons();
+    
+        
+    $ionicPlatform.ready(function() {
+        $cordovaLocalNotification.schedule({
+          id: 1,
+          title: "Added Favorite",
+          text: $scope.videos[index].name
+        }).then(function() {
+            console.log('Added Favorite ' + $scope.videos[index].name);
+          },
+          function() {
+            console.log('Failed to add Notification ');
+          });
+
+        $cordovaToast
+          .show('Added Favorite ' + $scope.videos[index].name, 'long', 'center')
+          .then(function(success) {
+            // success
+          }, function(error) {
+            // error
+          });
+      });
+    
+    
+    
+    
+    
     }
             
             
