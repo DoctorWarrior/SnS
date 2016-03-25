@@ -213,7 +213,7 @@
       "image": "images/blue_lobster.png",
       "genre": "emerging_readers",
       "language": "ASL",
-      "price": "2.99",
+      "price": 2.99,
       "description": "From the same team who made the award-winning ASL/English bilingual storybook app, The Baobab, we now bring you The Blue Lobster! The adventures of the curious little girl continues! In this storybook designed for younger and emerging readers, ages 3 & up, the curious little girl goes off in search for a rare blue lobster!",
       "comments": [
         {
@@ -245,6 +245,12 @@
           "comment": "Beautiful sign!",
           "author": "29",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "This is a test comment.",
+          "author": "TESTER3",
+          "date": "2016-03-21T11:23:26.156Z"
         }
       ]
     }
